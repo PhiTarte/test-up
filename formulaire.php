@@ -31,62 +31,62 @@
 			</div>
 		</div>
 		<div class="form-group row">
-		    <label for="staticFirstName" class="col-sm-4 col-form-label">Pr&eacute;nom</label>
+		    <label for="firstName" class="col-sm-4 col-form-label">Pr&eacute;nom</label>
 		    <div class="col-sm-10">
-		      <input type="text" class="form-control-plaintext" id="staticFirstName">
+		      <input type="text" class="form-control-plaintext" id="firstName" name="firstName" value="<?php if(isset($_POST['firstName'])) { echo $_POST['firstName'];};?>">
 		    </div>
 		</div>
 		<div class="form-group row">
-		    <label for="staticName" class="col-sm-4 col-form-label">Nom</label>
+		    <label for="name" class="col-sm-4 col-form-label">Nom</label>
 		    <div class="col-sm-10">
-		      <input type="text" class="form-control-plaintext" id="staticName">
+		      <input type="text" class="form-control-plaintext" id="name" name="name" value="<?php if(isset($_POST['name'])) { echo $_POST['name'];};?>">
 		    </div>
 		</div>
 		<div class="form-group row">
-		    <label for="staticPostalCode" class="col-sm-4 col-form-label">Code postal</label>
+		    <label for="postalCode" class="col-sm-4 col-form-label">Code postal</label>
 		    <div class="col-sm-10">
-		      <input type="text" class="form-control-plaintext" id="staticPostalCode">
+		      <input type="text" class="form-control-plaintext" id="postalCode" name="postalCode" value="<?php if(isset($_POST['postalCode'])) { echo $_POST['postalCode'];};?>">
 		    </div>
 		</div>
 		<div class="form-group row">
-		    <label for="staticTown" class="col-sm-4 col-form-label">Ville</label>
+		    <label for="town" class="col-sm-4 col-form-label">Ville</label>
 		    <div class="col-sm-10">
-		      <input type="text" class="form-control-plaintext" id="staticTown">
+		      <input type="text" class="form-control-plaintext" id="town" name="town" value="<?php if(isset($_POST['town'])) { echo $_POST['town'];};?>">
 		    </div>
 		</div>
 		<div class="form-group row">
-		    <label for="staticSocial" class="col-sm-4 col-form-label">Raison sociale</label>
+		    <label for="social" class="col-sm-4 col-form-label">Raison sociale</label>
 		    <div class="col-sm-10">
-		      <input type="text" class="form-control-plaintext" id="staticSocial">
+		      <input type="text" class="form-control-plaintext" id="social" name="social" value="<?php if(isset($_POST['social'])) { echo $_POST['social'];};?>">
 		    </div>
 		</div>
 		<div class="form-group row">
-		    <label for="staticTel" class="col-sm-4 col-form-label">T&eacute;l&eacute;phone</label>
+		    <label for="tel" class="col-sm-4 col-form-label">T&eacute;l&eacute;phone</label>
 		    <div class="col-sm-10">
-		      <input type="text" class="form-control-plaintext" id="staticTel">
+		      <input type="text" class="form-control-plaintext" id="tel" name="tel" value="<?php if(isset($_POST['tel'])) { echo $_POST['tel'];};?>">
 		    </div>
 		</div>
 	</div>
 	<div class="col-md-6" style="position: relative; height:100px;">
 	<p>Votre demande concerne: </p>
 		<div class="form-check">
-		  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="dej" checked>
+		  <input class="form-check-input" type="radio" name="dej" id="dej" value="dej" checked>
 		  <img src="up.png" style="height:10px;">
-		  <label class="form-check-label" for="exampleRadios1">
+		  <label class="form-check-label" for="dej">
 		    Ch&egrave;que D&eacute;jeuner
 		  </label>
 		</div>
 		<div class="form-check">
-		  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="cad">
+		  <input class="form-check-input" type="radio" name="cad" id="cad" value="cad">
 		  <img src="up.png" style="height:10px;">
-		  <label class="form-check-label" for="exampleRadios2">
+		  <label class="form-check-label" for="cad">
 		    Cadhoc
 		  </label>
 		</div>
 		<div class="form-check">
-		  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="dom">
+		  <input class="form-check-input" type="radio" name="dom" id="dom" value="dom">
 		  <img src="up.png" style="height:10px;">
-		  <label class="form-check-label" for="exampleRadios1">
+		  <label class="form-check-label" for="dom">
 		    Ch&egrave;que Domicile
 		  </label>
 		</div>
@@ -98,7 +98,11 @@
 	</section>
 	<section>
 		<?php
-			if (isset($_post["staticGender"])) {echo $_post["staticGender"];} 
+			$message="";
+			if (isset($_POST["gender"])) {
+				$message = $_POST["gender"]." ".$_POST['firstName']." ".$_POST['name']." habite ".$_POST['town']." (".$_POST['postalCode']." ) "." raison sociale: ".$_POST['social']." telephone: ".$_POST['tel'];
+			echo htmlentities($message); 	
+			}
 		?>
 	</section>
 </form>
