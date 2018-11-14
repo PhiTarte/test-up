@@ -1,4 +1,4 @@
 <?php
-header('Location: formulaire.php');
+header('Location: mailing.php');
 exit();
 ?>
