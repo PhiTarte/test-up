@@ -11,3 +11,5 @@
 	Y récupérer les données transmises en PHP
 	Les sécuriser pour une éventuelle mise en BDD
 	Les afficher sur la même page où tu le souhaite.
+
+AFIN DE VOIR SOIT LE FORMULAIRE, SOIT LE MAILING, MODIFIER DANS L'INDEX LA REDIRECTION
