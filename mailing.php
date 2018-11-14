@@ -5,12 +5,15 @@
 </head>
 <body style="height:795px;width:600px;">
 <div style="background-color:#33ffcc;width:100%;">
+	
+	<div style="float:right;background-color:#33ffcc;color:white;width:100%;">
 	<img src="logo_cipres.png" alt="logo" style="float:left;"/>
-	<p style="float:right;background-color:#33ffcc;color:white;">
-	CHALLENGE PERFORMANCE
-	<br/>
-	du 01/07/2017 au 31/01/2018
+	<p style="float:right;">
+		CHALLENGE PERFORMANCE
+		<br/>
+		du 01/07/2017 au 31/01/2018
 	</p>
+	</div>
 </div>
 <hr style="height:2em;" />
 <img src="central.png" alt="central" />
