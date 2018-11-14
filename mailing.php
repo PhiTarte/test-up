@@ -14,8 +14,8 @@
 </div>
 <hr style="height:2em;" />
 <img src="central.png" alt="central" />
-<div id="footer">
-	<a href="www.challenge-cipres.fr" style="text-decoration: none;background-color:grey;color:white;text-align:center;width:100%;">www.challenge-cipres.fr</a>
+<div id="footer" style="background-color:grey;text-align:center;width:100%;height:3em;">
+	<a href="www.challenge-cipres.fr" style="text-decoration: none;color:white;">www.challenge-cipres.fr</a>
 </div>
 </body>
 </html>
